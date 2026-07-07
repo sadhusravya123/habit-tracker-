@@ -1,0 +1,155 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#4facfe,#00c6ff);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding:40px;
+}
+
+.container{
+    width:100%;
+    max-width:1100px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+    color:#333;
+}
+
+.inputBox{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:30px;
+    flex-wrap:wrap;
+}
+
+.inputBox input{
+    width:320px;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.inputBox button{
+    padding:12px 20px;
+    border:none;
+    border-radius:8px;
+    background:#2196f3;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.inputBox button:hover{
+    background:#1565c0;
+}
+
+#habitList{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:20px;
+}
+
+.habit-card{
+    background:#f8f9fa;
+    border-radius:12px;
+    padding:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.habit-card h2{
+    color:#333;
+    margin-bottom:12px;
+}
+
+.stats{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:12px;
+    font-weight:bold;
+    color:#444;
+}
+
+.calendar{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:6px;
+    margin:15px 0;
+}
+
+.day{
+    width:40px;
+    height:40px;
+    border-radius:6px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#ddd;
+    cursor:pointer;
+    font-size:14px;
+    transition:.3s;
+}
+
+.day:hover{
+    transform:scale(1.08);
+}
+
+.completed{
+    background:#4caf50;
+    color:white;
+}
+
+.today{
+    border:3px solid #2196f3;
+}
+
+.deleteBtn{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    background:#f44336;
+    color:white;
+    cursor:pointer;
+    margin-top:10px;
+    transition:.3s;
+}
+
+.deleteBtn:hover{
+    background:#d32f2f;
+}
+
+.progress{
+    margin-top:10px;
+    font-weight:bold;
+    color:#555;
+}
+
+@media(max-width:700px){
+
+.container{
+    padding:20px;
+}
+
+.day{
+    width:35px;
+    height:35px;
+    font-size:12px;
+}
+
+}
